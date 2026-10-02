@@ -1,0 +1,6 @@
+[Create file] 단계의 File Name 칸 → fx → 아래 한 줄을 통째로 붙여넣기
+
+concat(substring(items('For_each')?['name'],0,lastIndexOf(items('For_each')?['name'],'.')),'_',addHours(triggerOutputs()?['body/receivedDateTime'],9,'yyyyMMdd_HHmmss'),substring(items('For_each')?['name'],lastIndexOf(items('For_each')?['name'],'.')))
+
+결과 예: 오퍼리스트.xlsx → 오퍼리스트_20260930_181202.xlsx (확장자 앞에 받은 한국 시각)
+반복 상자 이름이 "Apply to each"로 보이면 식 안의 For_each 두 곳을 Apply_to_each로 바꾸세요.

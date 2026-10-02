@@ -1,0 +1,12 @@
+아래 전체를 복사해서 Claude 데스크톱 앱의 새 작업에 붙여넣으세요. Claude가 한 단계씩 확인하며 설정을 도와줍니다.
+------------------------------------------------------------
+OPR 업체 자료 자동 점검을 내 PC에 설정하려고 해. 아래 순서대로 한 단계씩 진행하고, 각 단계가 끝날 때마다 성공/실패를 확인한 뒤 다음으로 넘어가줘. 내가 캡처를 올리면 그걸 보고 다음에 누를 곳을 알려줘.
+
+1. noa 커넥터: noa Outlook의 get_user_info로 내 메일 주소가 나오는지 확인해줘. "인증이 필요합니다"가 나오면 함께 나온 인증 링크로 로그인하라고 안내해줘.
+2. OneDrive 폴더: 연결된 폴더 중에 OPR수신자료 폴더가 있는지 확인해줘. 없으면 OneDrive에 OPR수신자료 폴더를 만들고 이 작업에 연결하라고 안내해줘.
+3. 스킬: opr-vendor-file-check 스킬이 설치돼 있는지 확인해줘. 없으면 키트의 1번 파일을 설정 > Capabilities(Skills)에서 업로드하라고 안내해줘.
+4. Power Automate: make.powerautomate.com에서 "When a new email arrives (V3)" 트리거(Folder=Inbox, Include Attachments=Yes, Only with Attachments=Yes) + For each 안의 "Create file"(OneDrive for Business, /OPR수신자료, File Content=Attachments Content, File Name=키트 2번 파일의 식) 흐름을 만드는 걸 화면 단위로 안내해줘. 오류가 나면 내가 올린 캡처의 오류 문구를 보고 원인과 해결을 알려줘.
+5. 테스트: 내가 키트 5번 가상자료를 나에게 메일로 보내면, 5분 뒤 OPR 자료 점검을 실행해서 "문제 5건" 결과 메일이 오는지 확인해줘.
+6. 예약: 테스트가 성공하면 평일 근무시간에 1시간마다 "OPR 자료 점검해줘"가 실행되도록 예약 작업을 만들어줘.
+
+규칙: 업체에게는 어떤 메일도 보내지 마. 문서보안(DRM)이나 비밀번호가 걸린 파일은 해제하려 하지 마. 메일 삭제·이동은 하지 마.

@@ -1,10 +1,43 @@
 {
-  "notify_to": "LEE_JEEWHUN01@eland.co.kr",
+  "notify_to": "",
+  "folder_name": "OPR수신자료",
   "required_fields": {
-    "상품코드": ["상품코드", "style no", "style no.", "style", "style#", "품번", "상품번호", "item code", "item no", "sku"],
-    "색상":     ["색상", "color", "colour", "컬러", "색"],
-    "사이즈":   ["사이즈", "size", "치수", "sz"],
-    "개수":     ["개수", "수량", "q'ty", "qty", "quantity", "pcs", "order qty"]
+    "상품코드": [
+      "상품코드",
+      "style no",
+      "style no.",
+      "style",
+      "style#",
+      "품번",
+      "상품번호",
+      "item code",
+      "item no",
+      "sku"
+    ],
+    "색상": [
+      "색상",
+      "color",
+      "colour",
+      "컬러",
+      "색"
+    ],
+    "사이즈": [
+      "사이즈",
+      "size",
+      "치수",
+      "sz"
+    ],
+    "개수": [
+      "개수",
+      "수량",
+      "q'ty",
+      "qty",
+      "quantity",
+      "pcs",
+      "order qty"
+    ]
   },
-  "numeric_fields": ["개수"]
+  "numeric_fields": [
+    "개수"
+  ]
 }
